@@ -1,0 +1,259 @@
+/* Paleta rosa suave y variables */
+:root {
+    --pink-100: #fff0f7;
+    --pink-200: #ffd6e8;
+    --pink-300: #ffadda;
+    --pink-400: #ff85c9;
+    --pink-500: #ff5cb8;
+    --accent: #d4008c;
+    --accent-dark: #a0006b;
+    --muted: #6b6b6b;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+    --max-width: 1200px;
+}
+
+/* Estilos globales */
+body {
+    background: linear-gradient(180deg, #fff 0%, var(--pink-100) 100%);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+.site-header {
+    background: linear-gradient(135deg, var(--pink-300), var(--accent));
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.header-content {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-family: 'Lobster', cursive;
+}
+
+.site-header h1 a {
+    color: white;
+    text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.site-description {
+    margin: 1rem 0 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Contenido principal */
+.main-content {
+    flex: 1;
+    padding: 2rem 0;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* Cards y Posts */
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(160,0,107,0.12);
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.post-title {
+    color: var(--accent-dark);
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.post-meta {
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.post-body {
+    color: #444;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.no-posts {
+    text-align: center;
+    color: var(--muted);
+    font-size: 1.1rem;
+    padding: 2rem;
+    background: var(--pink-100);
+    border-radius: 12px;
+}
+
+/* Botones */
+.btn-pink {
+    background: linear-gradient(135deg, var(--pink-400), var(--accent));
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+}
+
+.btn-pink:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(212,0,140,0.2);
+    color: white;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--accent);
+    border: 2px solid var(--pink-300);
+    padding: 0.7rem 1.4rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background: var(--pink-100);
+    border-color: var(--accent);
+    text-decoration: none;
+}
+
+/* Formularios */
+.form-container {
+    max-width: 640px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+}
+
+.form-container h2 {
+    color: var(--accent-dark);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-container form p {
+    margin: 0;
+    background: var(--pink-100);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.form-container form input[type="text"],
+.form-container form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid var(--pink-200);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.form-container form input[type="text"]:focus,
+.form-container form textarea:focus {
+    border-color: var(--accent);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--pink-200);
+}
+
+.form-container form label {
+    font-weight: 500;
+    color: var(--accent-dark);
+}
+
+/* Footer */
+.site-footer {
+    background: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: var(--muted);
+    margin-top: 3rem;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .site-header {
+        padding: 2rem 0;
+    }
+    
+    .site-header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .post-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .btn-secondary {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+    
+    .form-container {
+        margin: 0 1rem;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .site-header h1 {
+        font-size: 2rem;
+    }
+    
+    .btn-pink,
+    .btn-secondary {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
